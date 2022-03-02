@@ -25,16 +25,19 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <div class="d-flex  ms-auto">
           <input id="search-feild" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button id="search-btn" class="btn btn-outline-light" type="submit">Search</button>
+          <button id="search-btn" class="btn btn-outline-light" type="button" onclick="handler_btn()">Search</button>
         </div>
       </div>
+     
     </div>
   </nav>
-
+ 
 </header>
 
 <!-- main container -->
 <main>
+
+ <h4 id="warning-text" class="text-danger text-center"></h4>
 
 <!-- card body -->
 <div id="container" class="row row-cols-1 row-cols-md-3 g-5 container mx-auto mt-4"></div>
