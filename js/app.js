@@ -22,5 +22,29 @@ const handler_btn = () =>{
     }
 }
 const display_all_mobile = (phones) =>{
-    console.log(phones);
+    // console.log(phones);
+    const container = document.getElementById("container");
+    const showPhoneContent = phones.slice(0,20);
+    
+    showPhoneContent.forEach(per_phone => {
+       // console.log(per_phone);
+       const main_div = document.createElement('div');
+       main_div.innerHTML = `
+       
+       <div class="col">
+        <div class="card h-100 shadow stl">
+        <img src="${per_phone.image}" class="card-img-top px-5 py-2 pt-4" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">${per_phone.phone_name}</h5>
+          <p>Brand: ${per_phone.brand}</p>
+          </div>
+          <button onclick="PhoneDetils('${per_phone.slug}')" class="btn btn-primary detils w-75 mx-auto mb-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Details</button>
+        </div>
+        </div>
+
+       `
+       container.appendChild(main_div)
+    });
+
 }
+
